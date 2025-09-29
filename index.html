@@ -1,0 +1,53 @@
+<!--
+Idea del proyecto Physicsmon creado por el equipo rocket
+La idea de este proyecto es crear un juego educativo que combine conceptos de física con la mecánica de captura de criaturas similar a Pokémon.
+El usuario encontrara problemas los cuales debera "atacar" con las formulas y conceptos necesiarios
+al momento de resolver el problema correctamente, el usuario "atrapara" la criatura y se le sumaran puntos.
+El juego estara dividido en niveles, cada nivel representara un tema diferente de física (campos eléctricos, potencial eléctrico, ley de Gauss, etc.)
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Physicsmon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+        <!-- El script se mueve al final del body -->
+</head>
+<body>
+    <header>
+        <h1>Physicsmon</h1>
+        <p>¡Atrapa criaturas resolviendo problemas de física!</p>
+    </header>
+    <main>
+        <section class="score-area">
+            <strong>Puntos:</strong> <span id="score">0</span>
+        </section>
+        <section class="level-select">
+            <label for="level">Selecciona el nivel:</label>
+            <select id="level">
+                <option value="electricFields">Campos Eléctricos</option>
+                <option value="electricPotential">Potencial Eléctrico</option>
+                <option value="gaussLaw">Ley de Gauss</option>
+            </select>
+            <button id="startLevel">Comenzar nivel</button>
+        </section>
+        <section class="problem-area" style="display:none;">
+            <h2 id="problem-title"></h2>
+            <p id="problem-description"></p>
+            <input type="text" id="answer" placeholder="Tu respuesta">
+            <button id="submitAnswer">Atacar</button>
+            <div id="feedback"></div>
+        </section>
+        <section class="creature-capture" style="display:none;">
+            <h2>¡Has atrapado una criatura!</h2>
+            <p id="creature-name"></p>
+            <button id="nextProblem">Siguiente problema</button>
+        </section>
+    </main>
+    <script>
+    </script>
+    </body>
+    <script src="script.js"></script>
+</body>
+</html>
